@@ -7,3 +7,12 @@ class ShortsView(View):
 class ShortsWatchView(View):
     def get(self,request):
         return render(request,'watch.html')
+class MusicView(View):
+    def get(self,request):
+        return render(request,'music.html')
+# HTTP request method import HTTP
+# CRUD operation.
+# Create= POST
+# Read= GET
+# Update= PUT/PATCH 
+# Delete= DELETE

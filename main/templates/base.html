@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}YouTube Clone{% endblock %}</title>
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Left sidebar: 10% */
+        .sidebar {
+            position: fixed;
+            width: 10%;
+            height: 100vh;
+            padding: 20px 10px;
+            background: #f2f2f2;
+        }
+
+        /* Right section: 90% */
+        .main {
+            margin-left: 10%;
+            width: 90%;
+        }
+
+        /* Top header: 8% height */
+        header {
+            position: fixed;
+            top: 0;
+            width: 90%;
+            height: 8vh;
+            background: white;
+            border-bottom: 1px solid #ddd;
+            padding: 15px;
+        }
+
+        /* Dynamic content */
+        main {
+            padding: 20px;
+            margin-top: 8vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <p>🏠 Home</p>
+        <br>
+        <p>🎬 Shorts</p>
+        <br>
+        <p>📺 Subscriptions</p>
+    </aside>
+
+    <div class="main">
+        <header>
+            ▶ YouTube
+        </header>
+
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
+
+</body>
+</html>

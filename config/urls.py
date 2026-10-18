@@ -16,10 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from shorts.views import ShortsView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', ShortsView.as_view(), name='home'),
+    path('', include('home.urls')),
     path('shorts/', include('shorts.urls') ),
 ]

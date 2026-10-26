@@ -309,6 +309,40 @@ main textarea::placeholder {
 main button {
     cursor: pointer;
 }
+/* Home page */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    padding: 24px;
+}
+
+.video-card {
+    background-color: #181818;
+    color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    min-width: 0;
+}
+
+.video-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.video-card h3 {
+    font-size: 16px;
+    margin: 12px;
+}
+
+.video-card p {
+    color: #aaa;
+    font-size: 13px;
+    margin: 8px 12px;
+}
+
 
 /* =========================
    10. RESPONSIVE: TABLETS
@@ -398,6 +432,17 @@ main button {
 
     main {
         padding: 16px 12px;
+    }
+}
+@media (max-width: 900px) {
+    .video-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    .video-grid {
+        grid-template-columns: 1fr;
     }
 }
 </style>
